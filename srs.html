@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .tittle {
+            text-align: right;
+        }
+
+        /* Fixed sidenav, full height */
+
+        .sidenav {
+            height: 100%;
+            width: 300px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #3F4A59;
+            overflow-x: hidden;
+            padding-top: 16px;
+        }
+
+        /* Style the sidenav links and the dropdown button */
+
+        .sidenav a,
+        .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            color: #FFFFFF;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .dropdown-btn {
+            font-size: 19px;
+            padding-bottom: 5px;
+        }
+
+        /* On mouse-over */
+
+        .sidenav a:hover,
+        .dropdown-btn:hover {
+            background-color: #fff;
+            color: #3F4A59;
+        }
+
+        /* Main content */
+
+        .main {
+            margin-left: 300px;
+            /* Same as the width of the sidenav */
+            font-size: 20px;
+            /* Increased text to enable scrolling */
+        }
+
+        /*Section Content */
+
+        .section {
+            padding-left: 18px;
+        }
+
+        /* Add an active class to the active dropdown button */
+
+        .active {
+            background-color: #f9f9f9;
+            color: #3F4A59;
+        }
+
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+
+        .dropdown-container {
+            display: none;
+            background-color: none;
+            padding-left: 8px;
+            font-size: 16px;
+        }
+
+        /* Optional: Style the caret down icon */
+
+        .fa-caret-down {
+            float: right;
+            padding-right: 8px;
+        }
+
+        /* Some media queries for responsiveness */
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        @media print{
+.template-page.content {
+width: 100%; 
+margin: 20px 0 0 0; 
+float: none;
+}
+h1 {
+	margin-top: 20px !important; 
+}
+.main_color span {
+border-color: transparent !important; 
+}
+.avia-icongrid-flipback {
+display: none !important; 
+}
+p {orphans: 3;}
+@page { margin: 0cm }
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <button class="dropdown-btn"> 1. Introduction
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#1.1">1.1 Purpose</a>
+            <a href="#1.2">1.2 Document Convention</a>
+            <a href="#1.3">1.3 Intended Audience and Reading Suggestions</a>
+            <a href="#1.4">1.4 Product Scope</a>
+            <a href="#1.5">1.5 References</a>
+
+        </div>
+
+        <button class="dropdown-btn"> 2. Overall Description
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#2.1">2.2.1 Product Perspective</a>
+            <a href="#2.2">2.2 Product Function</a>
+            <a href="#2.3">2.3 User Class and Characteristics</a>
+            <a href="#2.4">2.4 Operating Enviornment</a>
+            <a href="#2.5">2.5 Design Implementation Constraints</a>
+            <a href="#2.6">2.6 User Documentation</a>
+            <a href="#2.7">2.7 Assumptions and Dependencies</a>
+
+        </div>
+
+        <button class="dropdown-btn"> 3. External Interface Requirements
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#3.1">3.1 User Interface</a>
+            <a href="#3.2">3.2 Hardware Interface</a>
+            <a href="#3.3">3.3 Software Interface</a>
+            <a href="#3.4">3.4 Communication Interface</a>
+
+        </div>
+
+        <button class="dropdown-btn"> 4. System Features
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#4.1">4.1 System Features</a>
+            <a href="#4.2">4.2 System Feature 2</a>
+
+        </div>
+
+        <button class="dropdown-btn"> 5. Other Nonfunctional Requirements
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#5.1">5.1 Performance Requirements</a>
+            <a href="#5.2">5.2 Safety Requirements</a>
+            <a href="#5.3">5.3 Security Requirements</a>
+            <a href="#5.4">5.4 Software Quality Attributes</a>
+
+        </div>
+
+        <button class="dropdown-btn"> 6. Other Requirements
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#6.1">6.1 Licensing Requirements</a>
+            <a href="#6.2">6.2 Legal , Copyright Notices</a>
+            <a href="#6.3">6.3 Applicable Standards</a>
+            <a href="#6.3">6.3 Database Requirements</a>
+
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="tittle">
+            <h2>Weather Wardrobe</h2>
+            <h4 class="Names">Prepared By : <br><br> Sifat Hasan 171***** <br><br> Antu Shaha
+                171***** <br><br> Noman 171*****</h4>
+        </div>
+        <h2>Introduction</h2>
+        <div class="section">
+            <h4 id="1.1">1.1 Purpose</h4>
+            <p>The perpose of this documents is to clearify the concept of Weather Wardrob. It will describe the purpose
+                and features of the system, the interfaces of the system in detail. </p>
+
+            <h4 id="1.2">1.2 Document Convention</h4>
+            <p>
+            </p>
+
+            <h4 id="1.3">1.3 Intended Audience and Reading Suggestions</h4>
+            <p>This project is for fashionable people as it will help people best match their outfit according to the
+                weather. Also people can buy fasionalbe outfits.
+            </p>
+
+            <h4 id="1.4">1.4 Product Scope</h4>
+            <p>The product's purpose is to help people with their outfits in different weather. Such as if there�s any
+                chance of rain, then this app will suggest wearing rainy weather outfits.
+                As there will be a lot of fashionable outfits in this web store (store in this app), people can choose
+                and buy their desire outfits from here with a simple click.
+            </p>
+            <h4 id="1.5"> 1.5 References</h4>
+            <p>Brella- personal weather(https://apps.apple.com/us/app/brella-personal-weather/id1163666072)</p>
+        </div>
+
+        <h2>Overall Description</h2>
+        <div class="section">
+            <h4 id="2.1">2.1 Product Perspective</h4>
+            <p>Weather Wardrobe is a smart and easy solution to wear a smart dress with the weather and to buy the
+                outfits users like. It will serve people with the best outfit to wear and to buy.</p>
+
+            <h4 id="2.2">2.2 Product Function</h4>
+            <p>The main function of this app is to suggest outfit according to weather forcast and sell them to the
+                users. </p>
+            <ol>
+                <li>Customer Login Panel</li>
+                <li>Search Product</li>
+                <li>Live Weather Info</li>
+                <li>Exclusive Offers</li>
+                <li>Dress Suggestions </li>
+                <li> Customer Support</li>
+            </ol>
+
+            <h4 id="2.3">2.3 User Class and Characteristics</h4>
+            <p>The software will consist of mainly two types of users: registered users and the admin. The admin’s job
+                is pretty simple and straightforward, they can only update the store. As the app will suggest dresses,
+                so if the user wants, they can buy those.</p>
+
+            <h4 id="2.4">2.4 Operating Enviornment</h4>
+            <p> Weather-Wardrobe run on Win7,Win8 , Win10 , Linux . </p>
+
+            <ul>
+                <li>Server: Localhost </li>
+                <li>Operating System: Windows</li>
+                <li>Hard Drive : Minimum 10 GB .</li>
+                <li>RAM : More than 4 GB .</li>
+                <li>Processor : Pentium 4 or higher.</li>
+                <li>Database: MySQL</li>
+                <li>Platform: Python, Django</li>
+                <li>Version Control : Git,Bitbucket</li>
+            </ul>
+            <h4 id="2.5">2.5 Design Implementation Constraints</h4>
+            <p>This system is designed in Django framework . Decision regarding which database to use should be taken
+                considering the fact that data being exchanged or stored is large ,and the appropriate data management
+                system will yield efficient performance . Limted to HTTP/HTTPS protocols. We'll use MySQL for database.
+            </p>
+            <p>Weather-Wardrobe is under the GNU General Public License Version 2,June 1991 . Enveryone , that does or
+                is going to develop or use Weather-Wardrobe , should agree and fully accept the terms of this kind of
+                license.</p>
+
+            <h4 id="2.6">2.6 User Documentation</h4>
+            <ul> registered user will have the options :
+                <li>-User profile.</li>
+                <li>-Password Changing.</li>
+                <li>and also get online support .</li>
+            </ul>
+            <h4 id="2.7">2.7 Assumptions and Dependencies</h4>
+            <ul>
+                <li> It is assumed that the user is familiar with the basic computer fundamentals.</li>
+                <li>Client/User will need a active internet connection or has accress to one to view the website .
+                </li>
+                <li>This web application highly depends on type and version of browser being install in the system i.e.
+                    browser being installed in the system i.e. browser version should be used which have HTML5 support .
+                    Example: Google Chrome, Mozilla Firefox, Apple Safari.
+                </li>
+                <li>Our website will not be violating any Internet Ethnic or Cultural Rules and won't be blocked by the
+                    Telecom companies .
+                </li>
+                <li>The maintenanc of the database will be assigned to the authorized person only .
+                </li>
+                <li>Only authorized persons will be allowed inside the system and the permission to modify.
+                </li>
+            </ul>
+        </div>
+
+        <h2>External Interface Requirements</h2>
+        <div class="section">
+            <h4 id="3.1">3.1 User Interface</h4>
+            <p>Front-end software: HTML, CSS, JS <br><br> Backend software: Django, SQL</p>
+            <h4 id="3.2">3.2 Hardware Interface</h4>
+            <ul>
+                <li>Windows</li>
+                <li>Any Modern Browser</li>
+            </ul>
+            <h4 id="3.3">3.3 Software Interface</h4>
+            <p> Following software are used for Online Shopping Management system</p>
+            <ul>
+                <li>Operating system: Windows</li>
+                <li>Database: MySQL</li>
+                <li>Framework: Django</li>
+            </ul>
+            <h4 id="3.4">3.4 Communication Interface</h4>
+            <p>This project supports all types of modern web browsers. We are using a simple Search pattern and online
+                purchase system.</p>
+        </div>
+
+        <h2>System Features</h2>
+        <div class="section">
+            <h4 id="4.1">4.1 System Features</h4>
+            <p></p>
+            <p><b>Response sequence</b></p>
+            <ul>
+                <li>Search for any item across all the Application</li>
+                <li>Display a product of detailed information about products in the nearby area</li>
+            </ul>
+
+            <h4 id="4.2">4.2 System Feature 2</h4>
+            <p>Functional Requirements</p>
+        </div>
+
+        <h2>Other Nonfunctional Requirements</h2>
+        <div class="section">
+            <h4 id="5.1">5.1 Performance Requirements</h4>
+            <p>The system should be balanced in terms of operating efficiency. It should use a little memory and will be
+                easily accessible by the user. memory management should be done discreetly so that no part of the memory
+                is wasted.
+            </p>
+            <h4 id="5.2">5.2 Safety Requirements</h4>
+            <p>System usage will not pose a risk to human users. It will not violate any political and governmental
+                laws. We respect your privacy and are committed to protecting your information.</p>
+
+            <h4 id="5.3">5.3 Security Requirements</h4>
+            <ul>
+                <li>System use secured database.</li>
+                <li>Account ID and password (PIN) protection.</li>
+                <li>Sign-off Button.</li>
+                <li>Failed Log-on Attempts</li>
+            </ul>
+            <h4 id="5.4">5.4 Software Quality Attributes</h4>
+            <ul>
+                <li>We are concerned about system failures.</li>
+                <li>System quality is a way that it can be easily used by the user.</li>
+                <li>The system cares about the quality of conversion that will change.</li>
+                <li>The level of performance relates to response times and similar steps for different events.</li>
+                <li>The quality of this system cares about fast speed, compliance. This is also secure, accurate, and
+                    therefore reliable.</li>
+            </ul>
+
+            <h4 id="5.5">5.5 Business Role</h4>
+            <ul>
+                <li>The user can log in at any time with any number of times and search for various details of his
+                    account.</li>
+                <li>All users will have different IDs and passwords to sign in to the account information.
+                </li>
+                <li>The solution offers very simple and modified features.
+                </li>
+                <li>very easy to view and operate various features.
+
+                </li>
+
+            </ul>
+        </div>
+
+        <h2>Other Requirements</h2>
+        <div class="section">
+            <h4 id="6.1">6.1 Licensing Requirements</h4>
+            <h4 id="6.2">6.2 There are no related special legal approvals . All the implementations related to the
+                system which functioning as illegal .</h4>
+            <h4 id="6.3">6.3 HTML pages are created in accordance with WWW consortium standards of HTML5 . </h4>
+            <h4 id="6.4">6.4 System used database which can hold relational data . These data will be in MySQL database
+                which exactly support the relatinal database schemas .</h4>
+        </div>
+    </div>
+
+
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
